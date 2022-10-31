@@ -7,18 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0CAA192907BA68009A227C /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CAA182907BA68009A227C /* CheckInView.swift */; };
+		DB0CAA1B2907BA73009A227C /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CAA1A2907BA73009A227C /* NewsData.swift */; };
+		DB0CAA1D2907BC16009A227C /* SetupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CAA1C2907BC16009A227C /* SetupData.swift */; };
 		DB400FB62904EBC500C6EE95 /* Flow_V2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB400FB52904EBC500C6EE95 /* Flow_V2App.swift */; };
 		DB400FB82904EBC500C6EE95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB400FB72904EBC500C6EE95 /* ContentView.swift */; };
 		DB400FBA2904EBC800C6EE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB400FB92904EBC800C6EE95 /* Assets.xcassets */; };
 		DB400FBD2904EBC800C6EE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB400FBC2904EBC800C6EE95 /* Preview Assets.xcassets */; };
+		DBA480B1290FB81D00AF870C /* DNAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B0290FB81D00AF870C /* DNAView.swift */; };
+		DBA480B3290FB82F00AF870C /* TheTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B2290FB82F00AF870C /* TheTimesView.swift */; };
+		DBA480B5290FB86300AF870C /* TheGuardianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B4290FB86300AF870C /* TheGuardianView.swift */; };
+		DBA480B7290FB87400AF870C /* TelegraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B6290FB87400AF870C /* TelegraphView.swift */; };
+		DBA480BC290FBEFE00AF870C /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = DBA480BB290FBEFE00AF870C /* CachedAsyncImage */; };
+		DBB4E3C9290B71D5007212CB /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4E3C8290B71D5007212CB /* HomeScreenView.swift */; };
+		DBB4E3CB290E0CC9007212CB /* NewsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4E3CA290E0CC9007212CB /* NewsUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0CAA182907BA68009A227C /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		DB0CAA1A2907BA73009A227C /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		DB0CAA1C2907BC16009A227C /* SetupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupData.swift; sourceTree = "<group>"; };
 		DB400FB22904EBC500C6EE95 /* Flow_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flow_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB400FB52904EBC500C6EE95 /* Flow_V2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow_V2App.swift; sourceTree = "<group>"; };
 		DB400FB72904EBC500C6EE95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB400FB92904EBC800C6EE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB400FBC2904EBC800C6EE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBA480B0290FB81D00AF870C /* DNAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNAView.swift; sourceTree = "<group>"; };
+		DBA480B2290FB82F00AF870C /* TheTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTimesView.swift; sourceTree = "<group>"; };
+		DBA480B4290FB86300AF870C /* TheGuardianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheGuardianView.swift; sourceTree = "<group>"; };
+		DBA480B6290FB87400AF870C /* TelegraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegraphView.swift; sourceTree = "<group>"; };
+		DBB4E3C8290B71D5007212CB /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		DBB4E3CA290E0CC9007212CB /* NewsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA480BC290FBEFE00AF870C /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +71,12 @@
 		DB400FB42904EBC500C6EE95 /* Flow_V2 */ = {
 			isa = PBXGroup;
 			children = (
+				DBA480BD291005B100AF870C /* NewsViews */,
+				DBB4E3C8290B71D5007212CB /* HomeScreenView.swift */,
 				DB400FB52904EBC500C6EE95 /* Flow_V2App.swift */,
 				DB400FB72904EBC500C6EE95 /* ContentView.swift */,
+				DB0CAA182907BA68009A227C /* CheckInView.swift */,
+				DBB12FA6290F9D7100512367 /* DatasAndSettings */,
 				DB400FB92904EBC800C6EE95 /* Assets.xcassets */,
 				DB400FBB2904EBC800C6EE95 /* Preview Content */,
 			);
@@ -65,6 +89,27 @@
 				DB400FBC2904EBC800C6EE95 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBA480BD291005B100AF870C /* NewsViews */ = {
+			isa = PBXGroup;
+			children = (
+				DBB4E3CA290E0CC9007212CB /* NewsUIView.swift */,
+				DBA480B6290FB87400AF870C /* TelegraphView.swift */,
+				DBA480B4290FB86300AF870C /* TheGuardianView.swift */,
+				DBA480B2290FB82F00AF870C /* TheTimesView.swift */,
+				DBA480B0290FB81D00AF870C /* DNAView.swift */,
+			);
+			path = NewsViews;
+			sourceTree = "<group>";
+		};
+		DBB12FA6290F9D7100512367 /* DatasAndSettings */ = {
+			isa = PBXGroup;
+			children = (
+				DB0CAA1A2907BA73009A227C /* NewsData.swift */,
+				DB0CAA1C2907BC16009A227C /* SetupData.swift */,
+			);
+			name = DatasAndSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +128,9 @@
 			dependencies = (
 			);
 			name = Flow_V2;
+			packageProductDependencies = (
+				DBA480BB290FBEFE00AF870C /* CachedAsyncImage */,
+			);
 			productName = Flow_V2;
 			productReference = DB400FB22904EBC500C6EE95 /* Flow_V2.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +159,9 @@
 				Base,
 			);
 			mainGroup = DB400FA92904EBC500C6EE95;
+			packageReferences = (
+				DBA480BA290FBEFE00AF870C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = DB400FB32904EBC500C6EE95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0CAA1D2907BC16009A227C /* SetupData.swift in Sources */,
+				DBA480B7290FB87400AF870C /* TelegraphView.swift in Sources */,
+				DBB4E3CB290E0CC9007212CB /* NewsUIView.swift in Sources */,
+				DB0CAA1B2907BA73009A227C /* NewsData.swift in Sources */,
 				DB400FB82904EBC500C6EE95 /* ContentView.swift in Sources */,
+				DBB4E3C9290B71D5007212CB /* HomeScreenView.swift in Sources */,
+				DBA480B5290FB86300AF870C /* TheGuardianView.swift in Sources */,
 				DB400FB62904EBC500C6EE95 /* Flow_V2App.swift in Sources */,
+				DBA480B1290FB81D00AF870C /* DNAView.swift in Sources */,
+				DBA480B3290FB82F00AF870C /* TheTimesView.swift in Sources */,
+				DB0CAA192907BA68009A227C /* CheckInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBA480BA290FBEFE00AF870C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBA480BB290FBEFE00AF870C /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBA480BA290FBEFE00AF870C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB400FAA2904EBC500C6EE95 /* Project object */;
 }
