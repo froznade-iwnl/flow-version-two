@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct healthNews: Codable {
+struct healthNews: Codable, Identifiable {
+    let id = UUID()
     var title: String
     var url: String
     var source: String
@@ -45,7 +46,58 @@ class TheTimesNewsCollector: ObservableObject {
     
     func getData() {
         
-        let url = URL(string: "https://mental-health-info-api.p.rapidapi.com/news/dna")!
+        let url = URL(string: "https://mental-health-info-api.p.rapidapi.com/news/thetimes")!
+        let session = URLSession.shared
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.setValue("4356d1995cmshcb3a848e79b4040p1adfa3jsn866463cb3957", forHTTPHeaderField: "X-RapidAPI-Key")
+        urlRequest.setValue("mental-health-info-api.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")
+        
+        session.dataTask(with: urlRequest) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                DispatchQueue.main.async {
+                    self.newsData = try! decoder.decode([healthNews].self, from: data)
+                }
+            }
+        }.resume()
+    }
+}
+
+//forTelegraph
+class TelegraphNewsCollector: ObservableObject {
+    
+    @Published var newsData : [healthNews] = []
+    
+    func getData() {
+        
+        let url = URL(string: "https://mental-health-info-api.p.rapidapi.com/news/telegraph")!
+        let session = URLSession.shared
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.setValue("4356d1995cmshcb3a848e79b4040p1adfa3jsn866463cb3957", forHTTPHeaderField: "X-RapidAPI-Key")
+        urlRequest.setValue("mental-health-info-api.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")
+        
+        session.dataTask(with: urlRequest) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                DispatchQueue.main.async {
+                    self.newsData = try! decoder.decode([healthNews].self, from: data)
+                    print(self.newsData)
+                }
+            }
+        }.resume()
+    }
+}
+
+//for The Guardian
+class TheGuardianNewsCollector: ObservableObject {
+    
+    @Published var newsData : [healthNews] = []
+    
+    func getData() {
+        
+        let url = URL(string: "https://mental-health-info-api.p.rapidapi.com/news/gaurdian")!
         let session = URLSession.shared
         var urlRequest = URLRequest(url: url)
         

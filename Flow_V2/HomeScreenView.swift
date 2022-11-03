@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeScreenView: View {
     var name: String
+    @StateObject var quote = QuoteGrab()
     
     var body: some View {
         ZStack {
@@ -16,11 +17,11 @@ struct HomeScreenView: View {
                 .ignoresSafeArea(.all)
             
             ScrollView {
-                VStack{
+                VStack(alignment: .leading){
                     
                     HStack {
                         
-                        Text("Hi, \(name)")
+                        Text("Hi, \(name)!")
                             .font(.system(.body, design: .rounded))
                             .bold()
                             .foregroundColor(.textColor)
@@ -32,7 +33,7 @@ struct HomeScreenView: View {
                     HStack {
                         
                         Text("Welcome Back")
-                            .font(.system(.title, design: .rounded))
+                            .font(.system(.largeTitle, design: .rounded))
                             .bold()
                             .foregroundColor(.textColor)
                         
@@ -42,34 +43,92 @@ struct HomeScreenView: View {
                         
                         
                     
-                    Text("You are feeling")
+                    HStack {
+                        VStack {
+                            Text("You are feeling")
+                                .bold()
+                                .font(.system(.body, design: .rounded))
+                                .foregroundColor(.textColor)
+                            
+                            if let lastElement = EmotionManager().emotions.last {
+                                
+                                Image(lastElement.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                
+                            } else {
+                                ProgressView()
+                            }
+                            
+                        }
                         .padding()
-                        .font(.headline)
-                        .foregroundColor(.textColor)
+                        .frame(maxHeight: .infinity)
+                        .background {
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                            
+                        }
+                        
+                        
+                        
+                        VStack(alignment: .leading){
+                            
+                            ForEach(quote.todayQuote) { quotes in
+                                Text("\"\(quotes.q)\"")
+                                    .italic()
+                                
+                                
+                                Text("- \(quotes.a)")
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                                    .padding(2)
+                            }
+                            .padding(.horizontal)
+                            
+                            
+                        }
+                        .padding(.top)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background {
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                        }
+                        
+                    }
+                    .padding(.vertical, 20)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxHeight: 200)
                     
                     
-                    Image(systemName: "circle.fill")
-                        .font(.system(size: 90))
-                        .foregroundColor(.yellow)
                     
-                    Text("Your weekly emotional status data")
-                        .padding()
-                        .font(.headline)
-                        .bold()
-                        .foregroundColor(.textColor)
-                    
-                    
-                    RoundedRectangle(cornerRadius: 12)
-                        .frame(height: 241)
-                        .foregroundColor(.white)
-                    
-                    
+                    HStack {
+                        Spacer()
+                        Text("Your weekly emotional status data")
+                            .padding(.vertical)
+                            .font(.system(.title3, design: .rounded))
+                            .bold()
+                            .foregroundColor(.textColor)
+                        Spacer()
+                    }
+                    .padding(.top, 20)
                         
                     
-                    
+                    ChartView()
+                        .padding()
+                        .background {
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                        }
+    
                 }
                 .padding(.horizontal, 20)
             }
+        }
+        .onAppear{
+            quote.getQuote()
+        }
+        .refreshable {
+            quote.getQuote()
         }
     }
 }

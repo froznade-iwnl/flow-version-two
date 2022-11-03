@@ -8,13 +8,58 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State public var tabViewSelection = 0
+    @State var showChecksIn = false
+    
+    
     var body: some View {
-        TabView{
+        
+        TabView(selection: $tabViewSelection){
             HomeScreenView(name: "Raditya")
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
+                .tag(0)
+               
+            
+            NewsUIView()
+                .tabItem {
+                    Label("Library", systemImage: "book")
+                }.tag(1)
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
+            
+            SearchBarView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass.circle")
+                }
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
+                .tag(2)
+            
+            CreditView()
+                .tabItem {
+                    Label("about", systemImage: "info.circle")
+                }
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
+                .tag(3)
+            
         }
+        .accentColor(.textColor)
+        .onAppear() {
+            showChecksIn = true
+        }
+        .fullScreenCover(isPresented: $showChecksIn, onDismiss: {
+            
+        }) {
+            CheckInView()
+        }
+        
+        
     }
 }
 

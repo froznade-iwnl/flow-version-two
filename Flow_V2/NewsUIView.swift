@@ -11,6 +11,10 @@ import CachedAsyncImage
 
 struct NewsUIView: View {
     
+    init(){
+        UITableView.appearance().backgroundColor = .green
+    }
+    
     let column = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -20,7 +24,8 @@ struct NewsUIView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
+            
             VStack(alignment: .leading) {
                 
                 List(sites) { news in
@@ -55,13 +60,15 @@ struct NewsUIView: View {
                         
                     }
                     .padding(.top, 20)
-                
+                    
                 }
-               
+                
             }
-            .navigationTitle("My Library")
+            .navigationTitle("My Library 📚")
+            .toolbarBackground(Color.textColor, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
         }
-        
     }
 }
 

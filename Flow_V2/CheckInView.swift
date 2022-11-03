@@ -9,9 +9,13 @@ import SwiftUI
 
 struct CheckInButton: View {
     
-    var textholder: String
+    @Environment(\.dismiss) var dismiss
+    var image: String
     var color: Color
     var id: Int
+    @AppStorage("ct") var daysCount = 0
+    
+    @StateObject var emotionData = EmotionManager()
     
     var body: some View {
         
@@ -19,20 +23,21 @@ struct CheckInButton: View {
             
             Button {
                 print("button \(id)")
+                emotionData.emotions.append(emotion(id: daysCount, image: image.lowercased(), emotionID: id))
+                daysCount += 1
+                print(emotionData.emotions)
+                dismiss()
             } label: {
                 VStack{
-                    Image(systemName: "house")
-                        .foregroundColor(.white)
+                    Image(image.lowercased())
+                        .resizable()
+                        .scaledToFit()
                         .padding()
-                    Text("\(textholder)")
-                        .foregroundColor(.white)
-                        .font(.body)
-                        .font(.system(.body, design: .rounded))
                 }
-                .frame(width: 100, height: 150)
+                .frame(width: 115, height: 115)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(color)
+                        .fill(color.opacity(0.6))
                         .shadow(color: .gray.opacity(0.6), radius: 4, y: 4)
                 )
             }
@@ -61,7 +66,7 @@ struct CheckInView: View {
                 
                 Text("How are you \nfeeling right now?")
                     .font(.system(.largeTitle, design: .rounded))
-                    .foregroundColor(.green)
+                    .foregroundColor(Color.textColor)
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                 
@@ -73,12 +78,12 @@ struct CheckInView: View {
                 
                 LazyVGrid(columns: columns) {
                     
-                    CheckInButton(textholder: "Ecstatic", color: .yellow, id: 0)
-                    CheckInButton(textholder: "Happy", color: .blue, id: 1)
-                    CheckInButton(textholder: "Neutral", color: .green, id: 2)
-                    CheckInButton(textholder: "Sad", color: .purple, id: 3)
-                    CheckInButton(textholder: "Miserable", color: .cyan, id: 4)
-                    CheckInButton(textholder: "Furious", color: .red, id: 5)
+                    CheckInButton(image: "Ecstatic", color: .yellow, id: 5)
+                    CheckInButton(image: "Happy", color: .green, id: 4)
+                    CheckInButton(image: "Neutral", color: .mint, id: 3)
+                    CheckInButton(image: "Sad", color: .teal, id: 2)
+                    CheckInButton(image: "Miserable", color: .purple, id: 1)
+                    CheckInButton(image: "Furious", color: .red, id: 0)
                     
                 }
                 
