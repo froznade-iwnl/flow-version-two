@@ -14,6 +14,7 @@
 		DB400FB82904EBC500C6EE95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB400FB72904EBC500C6EE95 /* ContentView.swift */; };
 		DB400FBA2904EBC800C6EE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB400FB92904EBC800C6EE95 /* Assets.xcassets */; };
 		DB400FBD2904EBC800C6EE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB400FBC2904EBC800C6EE95 /* Preview Assets.xcassets */; };
+		DB9B842E2914AF3C001DD6D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B842D2914AF3C001DD6D5 /* LoginView.swift */; };
 		DBA480B1290FB81D00AF870C /* DNAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B0290FB81D00AF870C /* DNAView.swift */; };
 		DBA480B3290FB82F00AF870C /* TheTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B2290FB82F00AF870C /* TheTimesView.swift */; };
 		DBA480B5290FB86300AF870C /* TheGuardianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA480B4290FB86300AF870C /* TheGuardianView.swift */; };
@@ -38,6 +39,7 @@
 		DB400FB72904EBC500C6EE95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB400FB92904EBC800C6EE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB400FBC2904EBC800C6EE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB9B842D2914AF3C001DD6D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DBA480B0290FB81D00AF870C /* DNAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNAView.swift; sourceTree = "<group>"; };
 		DBA480B2290FB82F00AF870C /* TheTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheTimesView.swift; sourceTree = "<group>"; };
 		DBA480B4290FB86300AF870C /* TheGuardianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheGuardianView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				DB400FB52904EBC500C6EE95 /* Flow_V2App.swift */,
 				DB400FB72904EBC500C6EE95 /* ContentView.swift */,
 				DBDC18FC291230CE0052C42F /* CreditView.swift */,
+				DB9B842D2914AF3C001DD6D5 /* LoginView.swift */,
 				DB0CAA182907BA68009A227C /* CheckInView.swift */,
 				DBB12FA6290F9D7100512367 /* DatasAndSettings */,
 				DB400FB92904EBC800C6EE95 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 				DBA480B5290FB86300AF870C /* TheGuardianView.swift in Sources */,
 				DBD86D0A291344E7006D09A8 /* CreditData.swift in Sources */,
 				DB400FB62904EBC500C6EE95 /* Flow_V2App.swift in Sources */,
+				DB9B842E2914AF3C001DD6D5 /* LoginView.swift in Sources */,
 				DBDC190129126A430052C42F /* CheckInData.swift in Sources */,
 				DBA480B1290FB81D00AF870C /* DNAView.swift in Sources */,
 				DBA480B3290FB82F00AF870C /* TheTimesView.swift in Sources */,

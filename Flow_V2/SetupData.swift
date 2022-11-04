@@ -73,3 +73,9 @@ extension UINavigationBarAppearance {
         UINavigationBar.appearance().standardAppearance = self
     }
 }
+
+struct user: Codable {
+    var username: String
+}
+
+var User = user(username: "")

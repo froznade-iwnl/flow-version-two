@@ -26,7 +26,7 @@ struct CreditView: View {
                     .bold()
                     .foregroundColor(.textColor)
                 
-                Text("Introducing FLOW's Development Team")
+                Text("Created by FLOW's Development Team")
                     .italic()
                 
                 Divider()
@@ -42,12 +42,12 @@ struct CreditView: View {
                         .font(.headline)
                         .padding(.bottom, 10)
                     
-                    Text("Design & Concept:")
+                    Text("Documentation")
                     Text("Ashton, Heng Yu Hang")
                         .font(.headline)
                         .padding(.bottom, 10)
                 }
-                    
+                     
                 
                 Text("Data Sources")
                     .font(.system(.largeTitle, design: .rounded))

@@ -11,12 +11,13 @@ struct ContentView: View {
     
     @State public var tabViewSelection = 0
     @State var showChecksIn = false
+    @State var haveEnteredName = false
     
     
     var body: some View {
         
         TabView(selection: $tabViewSelection){
-            HomeScreenView(name: "Raditya")
+            HomeScreenView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
@@ -52,6 +53,10 @@ struct ContentView: View {
         .accentColor(.textColor)
         .onAppear() {
             showChecksIn = true
+            haveEnteredName = true
+        }
+        .fullScreenCover(isPresented: $haveEnteredName) {
+            LoginView()
         }
         .fullScreenCover(isPresented: $showChecksIn, onDismiss: {
             

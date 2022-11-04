@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeScreenView: View {
-    var name: String
     @StateObject var quote = QuoteGrab()
     
     var body: some View {
@@ -21,7 +20,7 @@ struct HomeScreenView: View {
                     
                     HStack {
                         
-                        Text("Hi, \(name)!")
+                        Text("Hi, \((User.username == "" ? "User" : User.username))!")
                             .font(.system(.body, design: .rounded))
                             .bold()
                             .foregroundColor(.textColor)
@@ -135,6 +134,6 @@ struct HomeScreenView: View {
 
 struct HomeScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreenView(name: "TestPlayer")
+        HomeScreenView()
     }
 }
