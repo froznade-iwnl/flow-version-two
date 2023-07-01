@@ -4,4 +4,11 @@ Currently not published. However you can run it with a macbook with XCode instal
 Alternatively, here are some snapshots of the application:
 
 ## Pictures
-![Check in page]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/froznade-iwnl/froznade-iwnl/blob/main/Pictures/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-03%20at%2017.12.56.png?raw=true)https://github.com/froznade-iwnl/froznade-iwnl/blob/main/Pictures/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-03%20at%2017.12.56.png?raw=true)
+Check in          |  Home Screen
+:-------------------------:|:-------------------------:
+<img src="https://github.com/froznade-iwnl/froznade-iwnl/blob/main/Pictures/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-03%20at%2017.12.56.png?raw=true" width="300">  |  <img src="https://github.com/froznade-iwnl/froznade-iwnl/blob/main/Pictures/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-03%20at%2017.12.59.png?raw=true" width="300">
+
+Article Search         |  Library View 
+:-------------------------:|:-------------------------:
+<img src="https://github.com/froznade-iwnl/froznade-iwnl/blob/main/Pictures/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-03%20at%2017.13.32.png?raw=true" width="300">  |  <img src="https://github.com/froznade-iwnl/froznade-iwnl/blob/main/Pictures/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-03%20at%2017.13.05.png?raw=true" width="300">
+
